@@ -1,3 +1,3 @@
-# DAM app (React)
+# Front-end
 
 todo: description
