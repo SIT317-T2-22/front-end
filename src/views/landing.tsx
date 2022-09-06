@@ -1,7 +1,14 @@
-import React from "react";
+import * as React from "react";
+import NavBar from "../components/navbar";
+import Map from "../components/map";
 
 const LandingView = () => {
-    return <div>LandingView</div>;
+    return (
+        <div>
+            <NavBar></NavBar>
+            <Map></Map>
+        </div>
+    );
 };
 
 export default LandingView;
