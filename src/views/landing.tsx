@@ -1,12 +1,17 @@
 import * as React from "react";
+import LandingImage from "../components/landingimage";
 import NavBar from "../components/navbar";
-import Map from "../components/map";
+import LandingText from "../components/landingtext";
+import LandingFooter from "../components/landingfooter";
 
 const LandingView = () => {
     return (
         <div>
-            <NavBar></NavBar>
-            <Map></Map>
+            <LandingImage>
+                <NavBar></NavBar>
+                <LandingText></LandingText>
+                <LandingFooter></LandingFooter>
+            </LandingImage>
         </div>
     );
 };
