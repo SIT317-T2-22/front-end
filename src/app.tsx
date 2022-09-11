@@ -7,7 +7,8 @@ import { Routes, Route } from "react-router-dom";
 import LandingView from "./views/landing";
 import SignUpView from "./views/signup";
 import LoginView from "./views/login";
-import SubscriptionView from "./views/subscription";
+import SuburbView from "./views/suburb";
+import CalculateView from "./views/calculate";
 import NotFoundView from "./views/notfound";
 
 const PageWrapper = styled(Page)`
@@ -20,12 +21,10 @@ const App = () => {
             <Page>
                 <Routes>
                     <Route path="/" element={<LandingView />} />
+                    <Route path="/calculate" element={<CalculateView />} />
+                    <Route path="/suburbs" element={<SuburbView />} />
                     <Route path="/signup" element={<SignUpView />} />
                     <Route path="/login" element={<LoginView />} />
-                    <Route
-                        path="/subscription"
-                        element={<SubscriptionView />}
-                    />
                     <Route path="*" element={<NotFoundView />} />
                 </Routes>
             </Page>
