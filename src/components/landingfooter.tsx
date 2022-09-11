@@ -10,7 +10,7 @@ import {
     FooterColumnLeft,
     FooterColumnRight,
     FooterColumnMiddle,
-} from "../styles/FooterElements";
+} from "../styles/LandingFooterElements";
 
 const LandingFooter = () => {
     return (
