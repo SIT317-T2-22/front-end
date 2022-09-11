@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink as Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`
     margin: auto;
@@ -81,5 +82,17 @@ export const SubText = styled.div`
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 18px;
+    color: #414141;
+`;
+
+export const SignInLink = styled(Link)`
+    cursor: pointer;
+    text-decoration: none;
+    color: #414141;
+`;
+
+export const ForgotPasswordLink = styled(Link)`
+    cursor: pointer;
+    text-decoration: none;
     color: #414141;
 `;

@@ -5,11 +5,12 @@ import { Page } from "./components/page";
 import styled from "styled-components";
 import { Routes, Route } from "react-router-dom";
 import LandingView from "./views/landing";
-import SignUpView from "./views/signup";
-import LoginView from "./views/login";
+import CreateAccountView from "./views/createaccount";
+import SignInView from "./views/signin";
 import SuburbView from "./views/suburb";
 import CalculateView from "./views/calculate";
 import NotFoundView from "./views/notfound";
+import ForgotPasswordView from "./views/forgotpassword";
 
 const PageWrapper = styled(Page)`
     height: 100vh;
@@ -23,8 +24,15 @@ const App = () => {
                     <Route path="/" element={<LandingView />} />
                     <Route path="/calculate" element={<CalculateView />} />
                     <Route path="/suburbs" element={<SuburbView />} />
-                    <Route path="/signup" element={<SignUpView />} />
-                    <Route path="/login" element={<LoginView />} />
+                    <Route
+                        path="/createaccount"
+                        element={<CreateAccountView />}
+                    />
+                    <Route path="/signin" element={<SignInView />} />
+                    <Route
+                        path="/forgotpassword"
+                        element={<ForgotPasswordView />}
+                    />
                     <Route path="*" element={<NotFoundView />} />
                 </Routes>
             </Page>

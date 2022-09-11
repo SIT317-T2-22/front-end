@@ -2,7 +2,6 @@ import * as React from "react";
 import {
     Nav,
     NavLink,
-    Bars,
     NavMenu,
     NavBtn,
     NavBtnLink,
@@ -27,10 +26,10 @@ const NavBar = () => {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/calculate">Calculate</NavLink>
                     <NavLink to="/suburbs">Suburbs</NavLink>
-                    <NavLink to="/signup">Sign Up</NavLink>
+                    <NavLink to="/createaccount">Sign Up</NavLink>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/login">Login</NavBtnLink>
+                    <NavBtnLink to="/signin">Login</NavBtnLink>
                 </NavBtn>
             </Nav>
         </>

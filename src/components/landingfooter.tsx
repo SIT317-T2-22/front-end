@@ -12,7 +12,7 @@ import {
     FooterColumnMiddle,
 } from "../styles/LandingFooterElements";
 
-const LandingFooter = () => {
+const LandingFooter = (onRightClick: any) => {
     return (
         <>
             <FooterBox>
@@ -55,6 +55,7 @@ const LandingFooter = () => {
                         src={ArrowRight}
                         alt=""
                         style={{ marginLeft: 4, cursor: "pointer" }}
+                        onClick={onRightClick}
                     />
                 </FooterColumnRight>
             </FooterBox>

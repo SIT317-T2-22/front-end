@@ -9,15 +9,20 @@ import {
     Button,
     SubText,
     InputEl,
-} from "../styles/SignUpElements";
+    SignInLink,
+} from "../styles/CreateAccountElements";
 import { ErrorMessage } from "../styles/ErrorMessage";
 import Logo from "../assets/logo-coloured.png";
 
-const SignUpView = () => {
+const ForgotPasswordView = () => {
     // const [data, setData] = useState();
     const [formState, setFormState] = useState(false);
-    const [errors, setErrors] = useState({});
-    const [inputs, setInputs] = useState({});
+    const [errors, setErrors] = useState<{ password?: string; email?: string }>(
+        {}
+    );
+    const [inputs, setInputs] = useState<{ password?: string; email?: string }>(
+        {}
+    );
 
     const useForm = (initialValues: any) => {
         const handleSubmit = (e: any) => {
@@ -41,26 +46,22 @@ const SignUpView = () => {
     };
 
     const validate = (inputs: any) => {
-        const cond = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+        const cond = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
             inputs.email
         );
 
         // email Errors
         type errors = {
             email?: string;
-            password?: string;
         };
 
         const objErrors: errors = {};
         if (!inputs.email) {
             objErrors.email = "Hold on, a email is required";
-        } else if (!inputs.email.match(cond)) {
+        } else if (inputs.email.match(cond)) {
             objErrors.email = "Hold on, that email doesn't look valid";
         }
-        if (!inputs.password) {
-            // password Errors
-        }
-        return errors;
+        return objErrors;
     };
 
     const handleSubmit = async (e: any) => {
@@ -109,51 +110,39 @@ const SignUpView = () => {
                                 height: "94px",
                             }}
                         />
-                        <Header>Create Account</Header>
+                        <Header>Forgot your password</Header>
                         <Body>
-                            Create an account to get a tailored map and list of
-                            the most affordable suburbs according to your
-                            financial information.
+                            Enter your email address and we'll send you a link
+                            to reset your password.
                         </Body>
                         <InputEl
                             placeholder="Email Address"
                             type="email"
                             name="email"
-                            // value={inputs.email}
+                            value={inputs.email}
                             onChange={handleInputChange}
                             autoFocus={false}
                             className="email_icon"
                         />
-                        {/* {errors.email && (
+                        {errors.email && (
                             <p className="error_wrapper">
                                 <ErrorMessage>{errors.email}</ErrorMessage>
                             </p>
-                        )} */}
-                        <InputEl
-                            placeholder="Password"
-                            type="password"
-                            name="password"
-                            // value={inputs.password}
-                            onChange={handleInputChange}
-                            autoFocus={false}
-                            className="password_icon"
-                        />
-                        {/* {errors.password && (
-                            <p className="error_wrapper">
-                                <ErrorMessage>{errors.password}</ErrorMessage>
-                            </p>
-                        )} */}
+                        )}
                         <Button
                             // type="submit"
                             style={{ cursor: "pointer" }}
                         >
-                            Create Account
+                            Reset Password
                         </Button>
-                        {formState && <p className="modal">Account created</p>}
+                        {formState && <p className="modal">Email Sent</p>}
                         <SubText>
-                            Already have an account?{" "}
                             <u>
-                                <b>Sign In</b>
+                                <b>
+                                    <SignInLink to="/signin">
+                                        Back to login
+                                    </SignInLink>
+                                </b>
                             </u>
                         </SubText>
                     </FormInner>
@@ -163,4 +152,4 @@ const SignUpView = () => {
     );
 };
 
-export default SignUpView;
+export default ForgotPasswordView;

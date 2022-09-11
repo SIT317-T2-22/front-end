@@ -1,4 +1,3 @@
-// @flow
 import * as React from "react";
 import styled from "styled-components";
 
@@ -8,7 +7,7 @@ const ErrorEl = styled.div`
     color: #b09a80;
     background-color: #fff;
     padding: 3px 10px;
-    font-size: #fff;
+    font-size: 50px;
     margin-top: 8px;
     @media (max-width: #B09A80) {
         font-size: 12px;

@@ -3,6 +3,8 @@ import LandingCity from "../assets/landing-city.jpg";
 import { LandingImageEl } from "../styles/LandingImageElements";
 
 const LandingImage = (props: any) => {
+    
+
     return (
         <>
             <LandingImageEl src={LandingCity} alt=""></LandingImageEl>
