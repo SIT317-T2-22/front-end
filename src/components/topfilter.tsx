@@ -27,7 +27,7 @@ const TopFilter = () => {
                     income.
                 </SubBoldHeading>
             </TextContainer>
-            <FilterContainer>
+            {/* <FilterContainer>
                 <ColumnOne>
                     <div>Property Type</div>
                     <div>House drop down</div>
@@ -41,7 +41,7 @@ const TopFilter = () => {
                     <div>Bathrooms</div>
                     <div>Any drop down</div>
                 </ColumnThree>
-            </FilterContainer>
+            </FilterContainer> */}
         </>
     );
 };
