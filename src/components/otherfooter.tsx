@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const Map = () => {
+const OtherFooter = () => {
     return (
         <>
             <div></div>
@@ -8,4 +8,4 @@ const Map = () => {
     );
 };
 
-export default Map;
+export default OtherFooter;

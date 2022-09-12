@@ -30,14 +30,10 @@ const LandingView = () => {
 
     return (
         <div>
-            <LandingImage
-                key={imageholder2[currentImageIndex].id}
-                source={imageholder2[currentImageIndex].actualimage}
-            >
+            <LandingImage>
                 <NavBar></NavBar>
                 <LandingText></LandingText>
-                <LandingFooter
-                ></LandingFooter>
+                <LandingFooter></LandingFooter>
             </LandingImage>
         </div>
     );
