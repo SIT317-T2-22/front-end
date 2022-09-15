@@ -110,8 +110,8 @@ const SignInView = () => {
                                 marginLeft: "auto",
                                 marginRight: "auto",
                                 marginBottom: "50px",
-                                width: "302px",
-                                height: "94px",
+                                width: "297px",
+                                height: "47px",
                             }}
                         />
                         <Header>Sign In</Header>

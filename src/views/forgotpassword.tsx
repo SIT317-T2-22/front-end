@@ -106,8 +106,8 @@ const ForgotPasswordView = () => {
                                 marginLeft: "auto",
                                 marginRight: "auto",
                                 marginBottom: "50px",
-                                width: "302px",
-                                height: "94px",
+                                width: "297px",
+                                height: "47px",
                             }}
                         />
                         <Header>Forgot your password</Header>
