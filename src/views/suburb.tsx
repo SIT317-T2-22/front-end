@@ -7,7 +7,7 @@ import OtherFooter from "../components/otherfooter";
 const SuburbView = () => {
     return (
         <>
-            <div style={{ overflow: "hidden", position: "relative" }}>
+            <div style={{ overflowX: "hidden", position: "relative" }}>
                 <OtherNavBar></OtherNavBar>
                 <TopFilter></TopFilter>
                 <Map></Map>

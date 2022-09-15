@@ -32,23 +32,13 @@ export const NavLink = styled(Link)`
 export const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-right: -234px;
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
+    margin-right: -216px;
 `;
 
 export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
     margin-right: 74px;
-    /* Third Nav */
-    /* justify-content: flex-end;
-  width: 100vw; */
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
 `;
 
 export const NavBtnLink = styled(Link)`

@@ -17,8 +17,8 @@ const NavBar = () => {
                         src={LogoColoured}
                         alt=""
                         style={{
-                            width: "297px",
-                            height: "47px",
+                            width: "300px",
+                            height: "39px",
                         }}
                     />
                 </NavLink>
