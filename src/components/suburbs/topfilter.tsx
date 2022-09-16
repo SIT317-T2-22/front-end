@@ -1,5 +1,5 @@
 import * as React from "react";
-import SuburbImage from "../assets/suburb-background.jpg";
+import SuburbImage from "../../assets/suburb-background.jpg";
 import {
     Heading,
     SubHeading,
@@ -11,10 +11,16 @@ import {
     TabsContainer,
     SmallerContainerMap,
     SmallerContainerList,
-} from "../styles/TopFilterElements";
+} from "../../styles/TopFilterElements";
 import Filter from "./filter";
 
-const TopFilter = () => {
+const TopFilter = ({
+    changeViewOne,
+    changeViewTwo,
+}: {
+    changeViewOne: () => void;
+    changeViewTwo: () => void;
+}) => {
     return (
         <>
             <OuterContainer>
@@ -37,10 +43,10 @@ const TopFilter = () => {
                 <Filter />
                 <TabsContainer>
                     <SmallerContainerMap>
-                        <div>Suburbs in Map</div>
+                        <div onClick={changeViewTwo}>Suburbs in Map</div>
                     </SmallerContainerMap>
                     <SmallerContainerList>
-                        <div>Suburbs in List</div>
+                        <div onClick={changeViewOne}>Suburbs in List</div>
                     </SmallerContainerList>
                 </TabsContainer>
             </OuterContainer>

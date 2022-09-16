@@ -55,7 +55,6 @@ export const ColumnOne = styled.div`
 
     .select {
         width: 90%;
-        background: url("arrow.png") no-repeat;
         background-position: 80% center;
         font-family: "Raleway", sans-serif;
         font-weight: 500;
@@ -133,7 +132,6 @@ export const ColumnTwo = styled.div`
 
     .select_one {
         width: 120%;
-        background: url("arrow.png") no-repeat;
         background-position: 120% center;
         font-family: "Raleway", sans-serif;
         font-weight: 500;
@@ -169,7 +167,6 @@ export const ColumnTwo = styled.div`
 
     .select_two {
         width: 100%;
-        background: url("arrow.png") no-repeat;
         background-position: 100% center;
         font-family: "Raleway", sans-serif;
         font-weight: 500;
@@ -219,7 +216,6 @@ export const ColumnThree = styled.div`
 
     .select {
         width: 90%;
-        background: url("arrow.png") no-repeat;
         background-position: 80% center;
         font-family: "Raleway", sans-serif;
         font-weight: 500;

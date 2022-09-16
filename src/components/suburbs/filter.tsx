@@ -4,7 +4,7 @@ import {
     ColumnOne,
     ColumnTwo,
     ColumnThree,
-} from "../styles/FilterElements";
+} from "../../styles/FilterElements";
 
 const Filter = () => {
     return (
