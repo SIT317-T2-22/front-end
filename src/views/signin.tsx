@@ -15,9 +15,11 @@ import { ErrorMessage } from "../styles/ErrorMessage";
 import Logo from "../assets/logo-coloured.png";
 import MailLock from "../assets/mail-lock.png";
 import PassLock from "../assets/lock.png";
+import { useNavigate } from "react-router-dom";
 
 const SignInView = () => {
     // const [data, setData] = useState();
+    let navigate = useNavigate();
     const [formState, setFormState] = useState(false);
     const [errors, setErrors] = useState<{ password?: string; email?: string }>(
         {}
@@ -114,7 +116,9 @@ const SignInView = () => {
                                 marginBottom: "50px",
                                 width: "297px",
                                 height: "47px",
+                                cursor: "pointer",
                             }}
+                            onClick={() => navigate(-1)}
                         />
                         <Header>Sign In</Header>
                         <Body>

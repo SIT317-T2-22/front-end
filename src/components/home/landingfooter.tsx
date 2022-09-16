@@ -12,7 +12,13 @@ import {
     FooterColumnMiddle,
 } from "../../styles/LandingFooterElements";
 
-const LandingFooter = (onRightClick: any) => {
+const LandingFooter = ({
+    changeIncreaseIndex,
+    changeDecreaseIndex,
+}: {
+    changeIncreaseIndex: () => void;
+    changeDecreaseIndex: () => void;
+}) => {
     return (
         <>
             <FooterBox>
@@ -50,12 +56,17 @@ const LandingFooter = (onRightClick: any) => {
                     ></div>
                 </FooterColumnMiddle>
                 <FooterColumnRight>
-                    <img src={ArrowLeft} alt="" style={{ cursor: "pointer" }} />
+                    <img
+                        src={ArrowLeft}
+                        alt=""
+                        style={{ cursor: "pointer" }}
+                        onClick={changeDecreaseIndex}
+                    />
                     <img
                         src={ArrowRight}
                         alt=""
                         style={{ marginLeft: 4, cursor: "pointer" }}
-                        onClick={onRightClick}
+                        onClick={changeIncreaseIndex}
                     />
                 </FooterColumnRight>
             </FooterBox>

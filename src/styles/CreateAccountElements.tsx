@@ -119,3 +119,19 @@ export const ForgotPasswordLink = styled(Link)`
     text-decoration: none;
     color: #414141;
 `;
+
+export const NavLink = styled(Link)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+
+    &.active {
+        color: #e2a867;
+    }
+`;
