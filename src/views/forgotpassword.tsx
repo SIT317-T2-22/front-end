@@ -13,6 +13,7 @@ import {
 } from "../styles/CreateAccountElements";
 import { ErrorMessage } from "../styles/ErrorMessage";
 import Logo from "../assets/logo-coloured.png";
+import MailLock from "../assets/mail-lock.png";
 
 const ForgotPasswordView = () => {
     // const [data, setData] = useState();
@@ -115,20 +116,26 @@ const ForgotPasswordView = () => {
                             Enter your email address and we'll send you a link
                             to reset your password.
                         </Body>
-                        <InputEl
-                            placeholder="Email Address"
-                            type="email"
-                            name="email"
-                            value={inputs.email}
-                            onChange={handleInputChange}
-                            autoFocus={false}
-                            className="email_icon"
-                        />
-                        {errors.email && (
-                            <p className="error_wrapper">
-                                <ErrorMessage>{errors.email}</ErrorMessage>
-                            </p>
-                        )}
+                        <div>
+                            <img
+                                src={MailLock}
+                                alt=""
+                                className="mail_lock"
+                            ></img>
+                            <InputEl
+                                placeholder="Email Address"
+                                type="email"
+                                name="email"
+                                value={inputs.email}
+                                onChange={handleInputChange}
+                                autoFocus={false}
+                            />
+                            {errors.email && (
+                                <p className="error_wrapper">
+                                    <ErrorMessage>{errors.email}</ErrorMessage>
+                                </p>
+                            )}
+                        </div>
                         <Button
                             // type="submit"
                             style={{ cursor: "pointer" }}

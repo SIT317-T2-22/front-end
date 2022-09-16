@@ -13,6 +13,8 @@ import {
 } from "../styles/CreateAccountElements";
 import { ErrorMessage } from "../styles/ErrorMessage";
 import Logo from "../assets/logo-coloured.png";
+import MailLock from "../assets/mail-lock.png";
+import PassLock from "../assets/lock.png";
 
 const SignInView = () => {
     // const [data, setData] = useState();
@@ -120,34 +122,45 @@ const SignInView = () => {
                             affordable suburbs according to your financial
                             information.
                         </Body>
-                        <InputEl
-                            placeholder="Email Address"
-                            type="email"
-                            name="email"
-                            value={inputs.email}
-                            onChange={handleInputChange}
-                            autoFocus={false}
-                            className="email_icon"
-                        />
-                        {errors.email && (
-                            <p className="error_wrapper">
-                                <ErrorMessage>{errors.email}</ErrorMessage>
-                            </p>
-                        )}
-                        <InputEl
-                            placeholder="Password"
-                            type="password"
-                            name="password"
-                            value={inputs.password}
-                            onChange={handleInputChange}
-                            autoFocus={false}
-                            className="password_icon"
-                        />
-                        {errors.password && (
-                            <p className="error_wrapper">
-                                <ErrorMessage>{errors.password}</ErrorMessage>
-                            </p>
-                        )}
+                        <div>
+                            <img
+                                src={MailLock}
+                                alt=""
+                                className="mail_lock"
+                            ></img>
+                            <InputEl
+                                placeholder="Email Address"
+                                type="email"
+                                name="email"
+                                value={inputs.email}
+                                onChange={handleInputChange}
+                                autoFocus={false}
+                            />
+                            {errors.email && (
+                                <p className="error_wrapper">
+                                    <ErrorMessage>{errors.email}</ErrorMessage>
+                                </p>
+                            )}
+                        </div>
+                        <div>
+                            <img src={PassLock} alt="" className="lock"></img>
+                            <InputEl
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                                value={inputs.password}
+                                onChange={handleInputChange}
+                                autoFocus={false}
+                                className="password_text"
+                            />
+                            {errors.password && (
+                                <p className="error_wrapper">
+                                    <ErrorMessage>
+                                        {errors.password}
+                                    </ErrorMessage>
+                                </p>
+                            )}
+                        </div>
                         <Button
                             // type="submit"
                             style={{ cursor: "pointer" }}
