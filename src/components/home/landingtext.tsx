@@ -1,5 +1,5 @@
 import * as React from "react";
-import { LandingTextBox, LandingTextEl } from "../styles/LandingTextElement";
+import { LandingTextBox, LandingTextEl } from "../../styles/LandingTextElement";
 
 const LandingText = () => {
     return (

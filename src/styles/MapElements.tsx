@@ -5,28 +5,7 @@ export const OuterContainer = styled.div`
     margin-top: -300px;
     z-index: 4;
     background: #fff;
-`;
-
-export const BlueButton = styled.div`
-    background: #3699ff;
-    border-radius: 6px;
-    div {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 12px;
-        color: #ffffff;
-    }
-`;
-
-export const RedButton = styled.div`
-    background: #f64e60;
-    border-radius: 6px;
-    div {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 12px;
-        color: #ffffff;
-    }
+    padding-bottom: 1px;
 `;
 
 export const InnerContainer = styled.div`
@@ -35,19 +14,11 @@ export const InnerContainer = styled.div`
     border: 1px solid #898989;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 85px;
+
+    .container {
+        display: inline-block;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
 `;
-
-export const Image = styled.img`
-    display: block;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-`;
-
-export const Text = styled.div``;
-
-export const Heading = styled.div``;
-
-export const SubHeading = styled.div``;
-
-export const Buttons = styled.div``;

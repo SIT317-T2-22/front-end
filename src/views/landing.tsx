@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import LandingImage from "../components/landingimage";
-import NavBar from "../components/navbar";
-import LandingText from "../components/landingtext";
-import LandingFooter from "../components/landingfooter";
+import LandingImage from "../components/home/landingimage";
+import NavBar from "../components/home/navbar";
+import LandingText from "../components/home/landingtext";
+import LandingFooter from "../components/home/landingfooter";
 import { type ImageHolder } from "../consts/imageholder";
 
 const LandingView = () => {

@@ -11,6 +11,12 @@ import SuburbView from "./views/suburb";
 import CalculateView from "./views/calculate";
 import NotFoundView from "./views/notfound";
 import ForgotPasswordView from "./views/forgotpassword";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+
+library.add(fas, far, fab);
 
 const PageWrapper = styled(Page)`
     height: 100vh;

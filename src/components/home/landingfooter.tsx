@@ -1,16 +1,16 @@
 import * as React from "react";
-import Insta from "../assets/insta.png";
-import LinkedIn from "../assets/linkedin.png";
-import Facebook from "../assets/facebook.png";
-import ArrowLeft from "../assets/arrow-left.png";
-import ArrowRight from "../assets/arrow-right.png";
+import Insta from "../../assets/insta.png";
+import LinkedIn from "../../assets/linkedin.png";
+import Facebook from "../../assets/facebook.png";
+import ArrowLeft from "../../assets/arrow-left.png";
+import ArrowRight from "../../assets/arrow-right.png";
 import {
     FooterBox,
     Icon,
     FooterColumnLeft,
     FooterColumnRight,
     FooterColumnMiddle,
-} from "../styles/LandingFooterElements";
+} from "../../styles/LandingFooterElements";
 
 const LandingFooter = (onRightClick: any) => {
     return (

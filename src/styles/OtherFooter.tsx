@@ -11,7 +11,6 @@ export const OuterInnerContainer = styled.div`
     justify-content: end;
     align-content: end;
     margin-bottom: -70px;
-    margin-top: -30px;
     margin-right: -20px;
 `;
 
@@ -20,6 +19,7 @@ export const InnerContainer = styled.div`
     width: 100%;
     height: auto;
     padding: 50px 100px;
+    margin-top: -30px;
 `;
 
 export const InnerInnerContainer = styled.div`
@@ -57,6 +57,11 @@ export const ColumnTwo = styled.div`
     }
     li {
         list-style: none;
+    }
+    ul {
+        margin-left: 40px;
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
 `;
 
@@ -130,7 +135,7 @@ export const InputEl = styled.input`
     margin-top: 20px;
     border: none;
 
-    type="email" {
+    type=["email"] {
         width: 200px;
         height: 20px;
         padding-right: 50px;

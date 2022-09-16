@@ -5,8 +5,8 @@ import {
     NavMenu,
     NavBtn,
     NavBtnLink,
-} from "../styles/NavBarElements";
-import Logo from "../assets/logo-white.png";
+} from "../../styles/NavBarElements";
+import Logo from "../../assets/logo-white.png";
 
 const NavBar = () => {
     return (
