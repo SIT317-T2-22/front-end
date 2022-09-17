@@ -36,7 +36,7 @@ const CalculateView = () => {
 
     return (
         <>
-            <div>
+            <div style={{ overflowX: "hidden", position: "relative" }}>
                 <LoggedInNavBar></LoggedInNavBar>
                 <CalculateImage
                     changeViewOne={changeViewOne}
