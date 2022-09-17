@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useMutation } from '@apollo/client';
 import {
     OuterContainer,
     OuterForm,
@@ -15,6 +16,7 @@ import { ErrorMessage } from "../styles/ErrorMessageElements";
 import Logo from "../assets/logo-coloured.png";
 import MailLock from "../assets/mail-lock.png";
 import { useNavigate } from "react-router-dom";
+import mutations from "../settings/graphql-mutations";
 
 const ForgotPasswordView = () => {
     // const [data, setData] = useState();
@@ -26,8 +28,11 @@ const ForgotPasswordView = () => {
     const [inputs, setInputs] = useState<{ password?: string; email?: string }>(
         {}
     );
+    const [signUp, signUpResult] = useMutation(mutations.signUp);
+    const [errors, setErrors] = useState({});
+    const [inputs, setInputs] = useState<{email?: string, password?: string}>({});
 
-    const useForm = (initialValues: any) => {
+    const useForm = React.useCallback((initialValues: any) => {
         const handleSubmit = (e: any) => {
             if (e) {
                 e.preventDefault();
@@ -46,10 +51,10 @@ const ForgotPasswordView = () => {
             handleInputChange,
             inputs,
         };
-    };
+    }, [inputs]);
 
-    const validate = (inputs: any) => {
-        const cond = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+    const validate =  React.useCallback((inputs: any) => {
+        const cond = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
             inputs.email
         );
 
@@ -64,37 +69,49 @@ const ForgotPasswordView = () => {
         } else if (inputs.email.match(cond)) {
             objErrors.email = "Hold on, that email doesn't look valid";
         }
-        return objErrors;
-    };
+        if (!inputs.password) {
+            // password Errors
+        }
+        return errors;
+    }, [errors]);
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = React.useCallback(async (e: any) => {
         e.preventDefault();
         const validationErrors = validate(inputs);
         const noErrors = Object.keys(validationErrors).length === 0;
         setErrors(validationErrors);
         if (noErrors) {
-            // const data = { ...inputs };
-            // await api.noemail.create(data);
-            setFormState(true);
-            console.log("Authenticated", inputs);
-            handleReset();
+            signUp({variables: {
+                user:{
+                    email: inputs.email,
+                    password: inputs.password,
+                }
+            }})
         } else {
             console.log("errors try again", validationErrors);
         }
-    };
+    }, [inputs, signUp, validate]);
 
-    const handleReset = () => {
+    const handleReset = React.useCallback(() => {
         setInputs(() => ({
             email: "",
             password: "",
         }));
-    };
+    }, []);
 
     const { handleInputChange } = useForm({
         email: "",
         password: "",
         validate,
     });
+
+    React.useEffect(() => {
+        if(signUpResult){
+            // console.log(signUpResult);
+            // setFormState(true);
+            // handleReset();
+        }
+    }, [handleReset, signUpResult])
 
     return (
         <>
@@ -146,7 +163,17 @@ const ForgotPasswordView = () => {
                         >
                             Reset Password
                         </Button>
-                        {formState && <p className="modal">Email Sent</p>}
+                        {formState && <p className="modal">Account created</p>}
+                        {!signUpResult.loading &&
+                            signUpResult.error && (
+                                <p className="error_wrapper">
+                                    <ErrorMessage>{signUpResult.error.message}</ErrorMessage>
+                                </p>
+                            )
+                        }
+                        {!signUpResult.loading && signUpResult.data &&
+                            signUpResult.data.addUser === null ? "User already exsists" : JSON.stringify(signUpResult.data?.addUser)
+                        }
                         <SubText>
                             <u>
                                 <b>
