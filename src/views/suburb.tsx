@@ -3,7 +3,7 @@ import OtherNavBar from "../components/suburbs/othernavbar";
 import TopFilter from "../components/suburbs/topfilter";
 import Map from "../components/suburbs/map";
 import List from "../components/suburbs/list";
-import OtherFooter from "../components/suburbs/otherfooter";
+import OtherFooter from "../components/otherfooter";
 import { useState } from "react";
 
 const SuburbView = () => {

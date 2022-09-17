@@ -1,8 +1,8 @@
 import * as React from "react";
-import Logo from "../../assets/logo-white.png";
-import Insta from "../../assets/insta.png";
-import LinkedIn from "../../assets/linkedin.png";
-import Facebook from "../../assets/facebook.png";
+import Logo from "../assets/logo-white.png";
+import Insta from "../assets/insta.png";
+import LinkedIn from "../assets/linkedin.png";
+import Facebook from "../assets/facebook.png";
 import {
     OuterContainer,
     InnerContainer,
@@ -15,7 +15,7 @@ import {
     InnerInnerContainer,
     InputEl,
     OuterInnerContainer,
-} from "../../styles/OtherFooter";
+} from "../styles/OtherFooterElements";
 
 const OtherFooter = () => {
     return (
@@ -26,7 +26,7 @@ const OtherFooter = () => {
                         <InnerInnerContainer>
                             <ColumnOne className="sec">
                                 <img
-                                className="logo"
+                                    className="logo"
                                     src={Logo}
                                     alt=""
                                     style={{

@@ -11,7 +11,7 @@ import {
     InputEl,
     ForgotPasswordLink,
 } from "../styles/CreateAccountElements";
-import { ErrorMessage } from "../styles/ErrorMessage";
+import { ErrorMessage } from "../styles/ErrorMessageElements";
 import Logo from "../assets/logo-coloured.png";
 import MailLock from "../assets/mail-lock.png";
 import PassLock from "../assets/lock.png";
