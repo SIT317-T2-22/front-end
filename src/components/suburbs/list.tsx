@@ -26,6 +26,7 @@ const MapViewTwo = () => {
                         </RedButton>
                     </div>
                     <ListInner>
+                        <div className="rectangle"></div>
                         <div className="sec">
                             <h2 className="suburb">SUBURB</h2>
                             <ul>

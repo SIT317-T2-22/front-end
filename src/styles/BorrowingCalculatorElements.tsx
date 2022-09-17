@@ -30,6 +30,40 @@ export const BoxOne = styled.div`
     height: 600px;
     width: 480px;
     padding: 30px 40px 30px 40px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    .first_row {
+        .select {
+            background-position: 80% center;
+            font-family: "Raleway", sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            display: inline-block;
+            margin-top: 6px;
+            margin-right: 58px;
+
+            select {
+                background: transparent;
+                height: 34px;
+                width: 127px;
+                border: 0;
+                padding: 0;
+                border: 1px solid #b8bbc2;
+                border-radius: 10px;
+                position: relative;
+                z-index: 10;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .line {
+        width: 300px;
+        height: 0px;
+        border: 1px solid #b8bbc2;
+        transform: rotate(-0.18deg);
+    }
 `;
 
 export const BoxTwo = styled.div`
@@ -41,65 +75,21 @@ export const BoxTwo = styled.div`
     padding: 30px 40px 30px 40px;
 `;
 
-export const BlueButton = styled.div`
-    background: #3699ff;
-    border-radius: 6px;
-    width: 83px;
-    height: 34px;
-    margin-right: 10px;
-    display: inline-block;
-    margin-left: 705px;
-    cursor: pointer;
-    text-align: center;
-
-    div {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-size: 12px;
-        color: #ffffff;
-        line-height: 34px;
-    }
-`;
-
-export const RedButton = styled.div`
-    background: #f64e60;
-    border-radius: 6px;
-    width: 104px;
-    height: 34px;
-    display: inline-block;
-    margin-left: 2px;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 20px;
-
-    div {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-size: 12px;
-        color: #ffffff;
-        line-height: 34px;
-    }
-`;
-
 export const Heading = styled.div`
-    display: inline-block;
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
-    line-height: 21px;
-    color: #212121;
-    margin-left: 90px;
+    line-height: 30px;
+    color: #3d3d3d;
 `;
 
 export const SubHeading = styled.div`
-    position: absolute;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    color: #b5b5c3;
-    margin-top: -22px;
-    margin-left: 90px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    color: #4e4e4e;
+    margin-top: 14px;
 `;
 
 export const NotFoundTextBox = styled.div`

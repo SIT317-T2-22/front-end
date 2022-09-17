@@ -91,7 +91,15 @@ export const ListInner = styled.div`
     grid-template-columns: 1fr 1fr 1.1fr 1fr 1fr 1.1fr;
     grid-column-gap: 70px;
 
-    .sec {
+    .rectangle {
+        background: #f3f6f9;
+        border-radius: 6px;
+        width: 1070px;
+        height: 43px;
+        margin-top: -12px;
+        margin-left: -5px;
+        position: absolute;
+        z-index: -1;
     }
 
     .suburb {
@@ -115,7 +123,7 @@ export const ListInner = styled.div`
     .sec .props {
         text-align: center;
         grid-auto-rows: 1fr;
-        grid-row-gap: 19px;
+        grid-row-gap: 22px;
         display: grid;
     }
 
@@ -134,7 +142,7 @@ export const ListInner = styled.div`
         background: #c9f7f5;
         border-radius: 6px;
         width: 104px;
-        padding: 7px 5px;
+        padding: 4px 2px;
     }
 
     .sec ul li {
