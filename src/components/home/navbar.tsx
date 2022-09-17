@@ -2,12 +2,11 @@ import * as React from "react";
 import {
     Nav,
     NavLink,
-    Bars,
     NavMenu,
     NavBtn,
     NavBtnLink,
-} from "../styles/NavBarElements";
-import Logo from "../assets/logo-white.png";
+} from "../../styles/NavBarElements";
+import Logo from "../../assets/logo-white.png";
 
 const NavBar = () => {
     return (
@@ -18,8 +17,8 @@ const NavBar = () => {
                         src={Logo}
                         alt=""
                         style={{
-                            width: "248px",
-                            height: "69px",
+                            width: "297px",
+                            height: "47px",
                         }}
                     />
                 </NavLink>
@@ -27,10 +26,10 @@ const NavBar = () => {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/calculate">Calculate</NavLink>
                     <NavLink to="/suburbs">Suburbs</NavLink>
-                    <NavLink to="/signup">Sign Up</NavLink>
+                    <NavLink to="/createaccount">Sign Up</NavLink>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/login">Login</NavBtnLink>
+                    <NavBtnLink to="/signin">Login</NavBtnLink>
                 </NavBtn>
             </Nav>
         </>

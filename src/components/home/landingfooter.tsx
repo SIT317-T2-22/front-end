@@ -1,18 +1,30 @@
 import * as React from "react";
-import Insta from "../assets/insta.png";
-import LinkedIn from "../assets/linkedin.png";
-import Facebook from "../assets/facebook.png";
-import ArrowLeft from "../assets/arrow-left.png";
-import ArrowRight from "../assets/arrow-right.png";
+import Insta from "../../assets/insta.png";
+import LinkedIn from "../../assets/linkedin.png";
+import Facebook from "../../assets/facebook.png";
+import ArrowLeft from "../../assets/arrow-left.png";
+import ArrowRight from "../../assets/arrow-right.png";
 import {
     FooterBox,
     Icon,
     FooterColumnLeft,
     FooterColumnRight,
     FooterColumnMiddle,
-} from "../styles/LandingFooterElements";
+} from "../../styles/LandingFooterElements";
 
-const LandingFooter = () => {
+const LandingFooter = ({
+    changeIncreaseIndex,
+    changeDecreaseIndex,
+    isRectangleOne,
+    isRectangleTwo,
+    isRectangleThree,
+}: {
+    changeIncreaseIndex: () => void;
+    changeDecreaseIndex: () => void;
+    isRectangleOne: any;
+    isRectangleTwo: any;
+    isRectangleThree: any;
+}) => {
     return (
         <>
             <FooterBox>
@@ -26,7 +38,7 @@ const LandingFooter = () => {
                         style={{
                             height: 6,
                             width: 100,
-                            backgroundColor: "#FFFFFF",
+                            backgroundColor: isRectangleOne,
                             borderRadius: 36,
                         }}
                     ></div>
@@ -34,7 +46,7 @@ const LandingFooter = () => {
                         style={{
                             height: 6,
                             width: 100,
-                            backgroundColor: "#9D9D9D",
+                            backgroundColor: isRectangleTwo,
                             borderRadius: 36,
                             marginLeft: 30,
                         }}
@@ -43,18 +55,24 @@ const LandingFooter = () => {
                         style={{
                             height: 6,
                             width: 100,
-                            backgroundColor: "#9D9D9D",
+                            backgroundColor: isRectangleThree,
                             borderRadius: 36,
                             marginLeft: 30,
                         }}
                     ></div>
                 </FooterColumnMiddle>
                 <FooterColumnRight>
-                    <img src={ArrowLeft} alt="" style={{ cursor: "pointer" }} />
+                    <img
+                        src={ArrowLeft}
+                        alt=""
+                        style={{ cursor: "pointer" }}
+                        onClick={changeDecreaseIndex}
+                    />
                     <img
                         src={ArrowRight}
                         alt=""
                         style={{ marginLeft: 4, cursor: "pointer" }}
+                        onClick={changeIncreaseIndex}
                     />
                 </FooterColumnRight>
             </FooterBox>

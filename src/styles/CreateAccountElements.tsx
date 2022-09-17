@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink as Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`
     margin: auto;
@@ -32,6 +33,28 @@ export const FormInner = styled.form`
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+
+    .mail_lock {
+        margin-right: -72px;
+        display: inline-block;
+        height: 58px;
+        width: 58px;
+        margin-bottom: -20px;
+        position: relative;
+    }
+
+    .lock {
+        margin-right: -59px;
+        display: inline-block;
+        height: 54px;
+        width: 46px;
+        margin-bottom: -18px;
+        position: relative;
+    }
+
+    .password_text {
+        padding-right: 26px;
+    }
 `;
 
 export const Header = styled.div`
@@ -51,16 +74,17 @@ export const Body = styled.div`
 `;
 
 export const InputEl = styled.input`
-    display: flex;
+    display: inline-block;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 26px;
     color: #898989;
     margin-bottom: 35px;
-    height: 80px;
+    height: 83px;
     border: 1px solid #414141;
     border-radius: 15px;
     padding-right: 25px;
+    padding-left: 90px;
 `;
 
 export const Button = styled.button`
@@ -82,4 +106,32 @@ export const SubText = styled.div`
     font-weight: 400;
     font-size: 18px;
     color: #414141;
+`;
+
+export const SignInLink = styled(Link)`
+    cursor: pointer;
+    text-decoration: none;
+    color: #414141;
+`;
+
+export const ForgotPasswordLink = styled(Link)`
+    cursor: pointer;
+    text-decoration: none;
+    color: #414141;
+`;
+
+export const NavLink = styled(Link)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+
+    &.active {
+        color: #e2a867;
+    }
 `;
