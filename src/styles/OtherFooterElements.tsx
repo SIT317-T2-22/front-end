@@ -134,11 +134,4 @@ export const InputEl = styled.input`
     padding-left: 25px;
     margin-top: 20px;
     border: none;
-
-    type=["email"] {
-        width: 200px;
-        height: 20px;
-        padding-right: 50px;
-        margin-left: -1200px;
-    }
 `;
