@@ -22,12 +22,6 @@ const ForgotPasswordView = () => {
     // const [data, setData] = useState();
     let navigate = useNavigate();
     const [formState, setFormState] = useState(false);
-    const [errors, setErrors] = useState<{ password?: string; email?: string }>(
-        {}
-    );
-    const [inputs, setInputs] = useState<{ password?: string; email?: string }>(
-        {}
-    );
     const [signUp, signUpResult] = useMutation(mutations.signUp);
     const [errors, setErrors] = useState({});
     const [inputs, setInputs] = useState<{email?: string, password?: string}>({});
@@ -151,11 +145,11 @@ const ForgotPasswordView = () => {
                                 onChange={handleInputChange}
                                 autoFocus={false}
                             />
-                            {errors.email && (
+                            {/* {errors.email && (
                                 <p className="error_wrapper">
                                     <ErrorMessage>{errors.email}</ErrorMessage>
                                 </p>
-                            )}
+                            )} */}
                         </div>
                         <Button
                             // type="submit"
