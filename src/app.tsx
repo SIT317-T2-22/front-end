@@ -4,7 +4,7 @@ import {
     ApolloProvider,
     InMemoryCache,
     gql,
-} from "@apollo/client";
+} from "@apollo/client/";
 import "./app.css";
 import { Page } from "./components/page";
 import styled from "styled-components";
@@ -83,8 +83,8 @@ const App = () => {
                         <Route path="/" element={<LandingView />} />
                         <Route path="/calculate" element={<CalculateView />} />
                         <Route path="/suburbs" element={<SuburbView />} />
-                        <Route path="/signup" element={<SignUpView />} />
-                        <Route path="/login" element={<LoginView />} />
+                        <Route path="/signup" element={<CreateAccountView />} />
+                        <Route path="/login" element={<SignInView />} />
                         <Route path="*" element={<NotFoundView />} />
                     </Routes>
                 </Page>
