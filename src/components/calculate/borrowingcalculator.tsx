@@ -93,6 +93,9 @@ const BorrowingCalculator = () => {
                                     <select>
                                         <option value="Year">Per year</option>
                                         <option value="Month">Per month</option>
+                                        <option value="Fortnight">
+                                            Per fortnight
+                                        </option>
                                         <option value="Week">Per week</option>
                                     </select>
                                 </div>
@@ -128,6 +131,9 @@ const BorrowingCalculator = () => {
                                 <div className="select second">
                                     <select>
                                         <option value="Week">Per week</option>
+                                        <option value="Fortnight">
+                                            Per fortnight
+                                        </option>
                                         <option value="Month">Per month</option>
                                         <option value="Year">Per year</option>
                                     </select>
@@ -147,6 +153,9 @@ const BorrowingCalculator = () => {
                                 <div className="select second">
                                     <select>
                                         <option value="Week">Per week</option>
+                                        <option value="Fortnight">
+                                            Per fortnight
+                                        </option>
                                         <option value="Month">Per month</option>
                                         <option value="Year">Per year</option>
                                     </select>
@@ -167,6 +176,9 @@ const BorrowingCalculator = () => {
                                 <div className="select second">
                                     <select>
                                         <option value="Week">Per week</option>
+                                        <option value="Fortnight">
+                                            Per fortnight
+                                        </option>
                                         <option value="Month">Per month</option>
                                         <option value="Year">Per year</option>
                                     </select>
@@ -183,6 +195,9 @@ const BorrowingCalculator = () => {
                                 <div className="select second">
                                     <select>
                                         <option value="Week">Per week</option>
+                                        <option value="Fortnight">
+                                            Per fortnight
+                                        </option>
                                         <option value="Month">Per month</option>
                                         <option value="Year">Per year</option>
                                     </select>
@@ -204,6 +219,9 @@ const BorrowingCalculator = () => {
                                 <div className="select second">
                                     <select>
                                         <option value="Week">Per week</option>
+                                        <option value="Fortnight">
+                                            Per fortnight
+                                        </option>
                                         <option value="Month">Per month</option>
                                         <option value="Year">Per year</option>
                                     </select>

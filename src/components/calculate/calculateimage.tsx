@@ -4,10 +4,8 @@ import CalculateImageImage from "../../assets/calculator-background.jpg";
 import {
     Heading,
     SubHeading,
-    SubBoldHeading,
     Image,
     TextContainer,
-    NavLink,
     OuterContainer,
     TabsContainer,
     SmallerContainerMap,
