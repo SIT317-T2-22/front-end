@@ -15,9 +15,15 @@ import {
 const LandingFooter = ({
     changeIncreaseIndex,
     changeDecreaseIndex,
+    isRectangleOne,
+    isRectangleTwo,
+    isRectangleThree,
 }: {
     changeIncreaseIndex: () => void;
     changeDecreaseIndex: () => void;
+    isRectangleOne: any;
+    isRectangleTwo: any;
+    isRectangleThree: any;
 }) => {
     return (
         <>
@@ -32,7 +38,7 @@ const LandingFooter = ({
                         style={{
                             height: 6,
                             width: 100,
-                            backgroundColor: "#FFFFFF",
+                            backgroundColor: isRectangleOne,
                             borderRadius: 36,
                         }}
                     ></div>
@@ -40,7 +46,7 @@ const LandingFooter = ({
                         style={{
                             height: 6,
                             width: 100,
-                            backgroundColor: "#9D9D9D",
+                            backgroundColor: isRectangleTwo,
                             borderRadius: 36,
                             marginLeft: 30,
                         }}
@@ -49,7 +55,7 @@ const LandingFooter = ({
                         style={{
                             height: 6,
                             width: 100,
-                            backgroundColor: "#9D9D9D",
+                            backgroundColor: isRectangleThree,
                             borderRadius: 36,
                             marginLeft: 30,
                         }}

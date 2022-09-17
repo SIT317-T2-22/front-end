@@ -27,24 +27,36 @@ const TextThree = (
     </>
 );
 
+const RectangleColorOne = "#FFFFFF";
+const RectangleColorTwo = "#9D9D9D";
+
 const LandingView = () => {
     const [isLandingText, setIsLandingText] = useState(TextOne);
     const [isImgSrc, setIsImgSrc] = useState(city);
+    const [isRectangleOne, setIsRectangleOne] = useState(RectangleColorOne);
+    const [isRectangleTwo, setIsRectangleTwo] = useState(RectangleColorTwo);
+    const [isRectangleThree, setIsRectangleThree] = useState(RectangleColorTwo);
     const [isIndex, setIsIndex] = useState(1);
 
     const changeIncreaseIndex = () => {
         if (isIndex === 1) {
             setIsImgSrc(calculator);
             setIsLandingText(TextTwo);
+            setIsRectangleOne(RectangleColorTwo);
+            setIsRectangleTwo(RectangleColorOne);
             setIsIndex(isIndex + 1);
         } else if (isIndex === 2) {
             setIsImgSrc(map);
             setIsLandingText(TextThree);
+            setIsRectangleTwo(RectangleColorTwo);
+            setIsRectangleThree(RectangleColorOne);
             setIsIndex(isIndex + 1);
         } else if (isIndex === 3) {
             setIsIndex(1);
             setIsImgSrc(city);
             setIsLandingText(TextOne);
+            setIsRectangleOne(RectangleColorOne);
+            setIsRectangleThree(RectangleColorTwo);
         }
     };
 
@@ -52,14 +64,20 @@ const LandingView = () => {
         if (isIndex === 1) {
             setIsImgSrc(map);
             setIsLandingText(TextThree);
+            setIsRectangleOne(RectangleColorTwo);
+            setIsRectangleThree(RectangleColorOne);
             setIsIndex(3);
         } else if (isIndex === 3) {
             setIsImgSrc(calculator);
             setIsLandingText(TextTwo);
+            setIsRectangleThree(RectangleColorTwo);
+            setIsRectangleTwo(RectangleColorOne);
             setIsIndex(isIndex - 1);
         } else if (isIndex === 2) {
             setIsImgSrc(city);
             setIsLandingText(TextOne);
+            setIsRectangleOne(RectangleColorOne);
+            setIsRectangleTwo(RectangleColorTwo);
             setIsIndex(isIndex - 1);
         }
     };
@@ -72,6 +90,9 @@ const LandingView = () => {
                 <LandingFooter
                     changeIncreaseIndex={changeIncreaseIndex}
                     changeDecreaseIndex={changeDecreaseIndex}
+                    isRectangleOne={isRectangleOne}
+                    isRectangleTwo={isRectangleTwo}
+                    isRectangleThree={isRectangleThree}
                 ></LandingFooter>
             </LandingImage>
         </div>
