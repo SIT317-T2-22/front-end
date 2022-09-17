@@ -4,7 +4,7 @@ import {
     ApolloProvider,
     InMemoryCache,
     gql,
-} from "@apollo/client";
+} from "@apollo/client/";
 import "./app.css";
 import { Page } from "./components/page";
 import styled from "styled-components";
