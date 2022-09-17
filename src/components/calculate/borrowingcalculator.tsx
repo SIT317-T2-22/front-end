@@ -4,10 +4,13 @@ import {
     SubHeading,
     BlueButton,
     RedButton,
+    BoxOne,
+    BoxTwo,
     ListInner,
     OuterContainer,
     InnerContainer,
-} from "../../styles/ListElements";
+    Button
+} from "../../styles/BorrowingCalculatorElements";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const BorrowingCalculator = () => {
@@ -15,19 +18,11 @@ const BorrowingCalculator = () => {
         <>
             <OuterContainer>
                 <InnerContainer>
-                    <div className="container">
-                        <Heading>Most Affordable</Heading>
-                        <SubHeading>More than n+ suburbs</SubHeading>
-                        <BlueButton>
-                            <div>Refresh</div>
-                        </BlueButton>
-                        <RedButton>
-                            <div>Tailor List</div>
-                        </RedButton>
-                    </div>
                     <ListInner>
-                        <div>borrowing calculator</div>
+                        <BoxOne>asdsa</BoxOne>
+                        <BoxTwo>asdsad</BoxTwo>
                     </ListInner>
+                    <Button>Get Suburbs Report</Button>
                 </InnerContainer>
             </OuterContainer>
         </>

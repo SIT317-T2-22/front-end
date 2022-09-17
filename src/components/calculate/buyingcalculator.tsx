@@ -1,33 +1,23 @@
 import * as React from "react";
 import {
-    Heading,
-    SubHeading,
-    BlueButton,
-    RedButton,
-    ListInner,
     OuterContainer,
     InnerContainer,
-} from "../../styles/ListElements";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+    NotFoundTextBox,
+    NotFoundTextEl,
+} from "../../styles/BorrowingCalculatorElements";
 
 const BuyingCalculator = () => {
     return (
         <>
             <OuterContainer>
                 <InnerContainer>
-                    <div className="container">
-                        <Heading>Most Affordable</Heading>
-                        <SubHeading>More than n+ suburbs</SubHeading>
-                        <BlueButton>
-                            <div>Refresh</div>
-                        </BlueButton>
-                        <RedButton>
-                            <div>Tailor List</div>
-                        </RedButton>
-                    </div>
-                    <ListInner>
-                        <div>BUYING CALCULATOR</div>
-                    </ListInner>
+                    <NotFoundTextBox>
+                        <NotFoundTextEl>
+                            Wow you're <b>curious!</b> <br />
+                            This feature hasn't been implemented yet. <br />
+                            <b>Come back again later!</b>
+                        </NotFoundTextEl>
+                    </NotFoundTextBox>
                 </InnerContainer>
             </OuterContainer>
         </>

@@ -41,12 +41,14 @@ const LoggedInNavBar = () => {
                             className="Nav_Btn"
                         />
                     </NavLink>
-                    <img
-                        src={Profile}
-                        alt=""
-                        style={{ width: "52px", height: "52px" }}
-                        className="Nav_Btn"
-                    />
+                    <NavLink to="/notfound">
+                        <img
+                            src={Profile}
+                            alt=""
+                            style={{ width: "52px", height: "52px" }}
+                            className="Nav_Btn"
+                        />
+                    </NavLink>
                 </NavBtn>
             </Nav>
         </>

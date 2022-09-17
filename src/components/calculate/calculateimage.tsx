@@ -30,26 +30,18 @@ const CalculateImage = ({
                     style={{ display: "inline-block", overflow: "hidden" }}
                 ></Image>
                 <TextContainer>
-                    <Heading>Discover Suburbs in Victoria.</Heading>
+                    <Heading>How much can I afford?</Heading>
                     <SubHeading>
-                        Most to least affordable suburbs according to median
-                        income.
+                        Enter your financial information to estimate which
+                        suburb is right for you.
                     </SubHeading>
-                    <SubBoldHeading>
-                        Click here to{" "}
-                        <u>
-                            <NavLink to="/calculate">view</NavLink>
-                        </u>{" "}
-                        the most affordable suburbs tailored according to your
-                        income.
-                    </SubBoldHeading>
                 </TextContainer>
                 <TabsContainer>
                     <SmallerContainerMap>
-                        <div onClick={changeViewTwo}>Suburbs in Map</div>
+                        <div onClick={changeViewTwo}>Borrowing Calculator</div>
                     </SmallerContainerMap>
                     <SmallerContainerList>
-                        <div onClick={changeViewOne}>Suburbs in List</div>
+                        <div onClick={changeViewOne}>Buying Calculator</div>
                     </SmallerContainerList>
                 </TabsContainer>
             </OuterContainer>

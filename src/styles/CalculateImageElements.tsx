@@ -11,7 +11,7 @@ export const Image = styled.img`
     overflow: hidden;
     z-index: -1;
     width: 100%;
-    margin-top: -500px;
+    margin-top: -450px;
 `;
 
 export const TextContainer = styled.div`
@@ -25,9 +25,10 @@ export const Heading = styled.div`
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-size: 35px;
-    color: #ffffff;
+    line-height: 52px;
+    color: #3f3f3f;
     position: absolute;
-    bottom: 78%;
+    bottom: 69%;
     width: 67%;
     margin: auto;
     display: block;
@@ -37,11 +38,12 @@ export const Heading = styled.div`
 
 export const SubHeading = styled.div`
     font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3f3f3f;
     position: absolute;
-    bottom: 74%;
+    bottom: 67%;
     width: 67%;
     margin: auto;
     display: block;
@@ -101,7 +103,7 @@ export const FilterContainer = styled.div`
 
 export const TabsContainer = styled.div`
     position: absolute;
-    margin-top: 173px;
+    margin-top: 268px;
 `;
 
 export const SmallerContainerMap = styled.div`

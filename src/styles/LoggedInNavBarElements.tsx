@@ -21,7 +21,7 @@ export const NavLink = styled(Link)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
 
     &.active {
@@ -41,7 +41,7 @@ export const NavBtn = styled.nav`
     margin-right: -10px;
 
     img {
-        margin-left: 60px;
+        margin-left: 30px;
         cursor: pointer;
     }
 `;

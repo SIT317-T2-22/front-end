@@ -66,7 +66,7 @@ export const RedButton = styled.div`
 export const Heading = styled.div`
     display: inline-block;
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 20px;
     line-height: 21px;
     color: #212121;

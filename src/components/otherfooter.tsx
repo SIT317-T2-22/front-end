@@ -39,7 +39,7 @@ const OtherFooter = () => {
                                     <br />
                                     We will find the best suburb you can afford.{" "}
                                     <br />
-                                    We believe that, no one should settle for
+                                    We believe that no one should settle for
                                     less.
                                 </p>
                                 <Icon src={Insta} alt="" />

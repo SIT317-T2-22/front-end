@@ -21,7 +21,7 @@ export const NavLink = styled(Link)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
 
     &.active {
@@ -50,7 +50,7 @@ export const NavBtnLink = styled(Link)`
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
 
     /* Second Nav */
