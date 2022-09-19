@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useMutation } from '@apollo/client';
+import { useMutation } from "@apollo/client";
 import {
     OuterContainer,
     OuterForm,
@@ -24,67 +24,80 @@ const ForgotPasswordView = () => {
     const [formState, setFormState] = useState(false);
     const [signUp, signUpResult] = useMutation(mutations.signUp);
     const [errors, setErrors] = useState({});
-    const [inputs, setInputs] = useState<{email?: string, password?: string}>({});
+    const [inputs, setInputs] = useState<{ email?: string; password?: string }>(
+        {}
+    );
 
-    const useForm = React.useCallback((initialValues: any) => {
-        const handleSubmit = (e: any) => {
-            if (e) {
-                e.preventDefault();
-            }
-            console.log(inputs);
-        };
-        const handleInputChange = (e: any) => {
-            e.persist();
-            setInputs((inputs) => ({
-                ...inputs,
-                [e.target.name]: e.target.value,
-            }));
-        };
-        return {
-            handleSubmit,
-            handleInputChange,
-            inputs,
-        };
-    }, [inputs]);
-
-    const validate =  React.useCallback((inputs: any) => {
-        const cond = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
-            inputs.email
-        );
-
-        // email Errors
-        type errors = {
-            email?: string;
-        };
-
-        const objErrors: errors = {};
-        if (!inputs.email) {
-            objErrors.email = "Hold on, a email is required";
-        } else if (inputs.email.match(cond)) {
-            objErrors.email = "Hold on, that email doesn't look valid";
-        }
-        if (!inputs.password) {
-            // password Errors
-        }
-        return errors;
-    }, [errors]);
-
-    const handleSubmit = React.useCallback(async (e: any) => {
-        e.preventDefault();
-        const validationErrors = validate(inputs);
-        const noErrors = Object.keys(validationErrors).length === 0;
-        setErrors(validationErrors);
-        if (noErrors) {
-            signUp({variables: {
-                user:{
-                    email: inputs.email,
-                    password: inputs.password,
+    const useForm = React.useCallback(
+        (initialValues: any) => {
+            const handleSubmit = (e: any) => {
+                if (e) {
+                    e.preventDefault();
                 }
-            }})
-        } else {
-            console.log("errors try again", validationErrors);
-        }
-    }, [inputs, signUp, validate]);
+                console.log(inputs);
+            };
+            const handleInputChange = (e: any) => {
+                e.persist();
+                setInputs((inputs) => ({
+                    ...inputs,
+                    [e.target.name]: e.target.value,
+                }));
+            };
+            return {
+                handleSubmit,
+                handleInputChange,
+                inputs,
+            };
+        },
+        [inputs]
+    );
+
+    const validate = React.useCallback(
+        (inputs: any) => {
+            const cond = !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+                inputs.email
+            );
+
+            // email Errors
+            type errors = {
+                email?: string;
+            };
+
+            const objErrors: errors = {};
+            if (!inputs.email) {
+                objErrors.email = "Hold on, a email is required";
+            } else if (inputs.email.match(cond)) {
+                objErrors.email = "Hold on, that email doesn't look valid";
+            }
+            if (!inputs.password) {
+                // password Errors
+            }
+            return errors;
+        },
+        [errors]
+    );
+
+    const handleSubmit = React.useCallback(
+        async (e: any) => {
+            e.preventDefault();
+            const validationErrors = validate(inputs);
+            const noErrors = Object.keys(validationErrors).length === 0;
+            setErrors(validationErrors);
+            if (noErrors) {
+                signUp({
+                    variables: {
+                        user: {
+                            email: inputs.email,
+                            password: inputs.password,
+                        },
+                    },
+                });
+            } else {
+                console.log("errors try again", validationErrors);
+            }
+        },
+        [inputs, signUp, validate]
+    );
 
     const handleReset = React.useCallback(() => {
         setInputs(() => ({
@@ -100,12 +113,12 @@ const ForgotPasswordView = () => {
     });
 
     React.useEffect(() => {
-        if(signUpResult){
+        if (signUpResult) {
             // console.log(signUpResult);
             // setFormState(true);
             // handleReset();
         }
-    }, [handleReset, signUpResult])
+    }, [handleReset, signUpResult]);
 
     return (
         <>
@@ -158,16 +171,18 @@ const ForgotPasswordView = () => {
                             Reset Password
                         </Button>
                         {formState && <p className="modal">Account created</p>}
+                        {!signUpResult.loading && signUpResult.error && (
+                            <p className="error_wrapper">
+                                <ErrorMessage>
+                                    {signUpResult.error.message}
+                                </ErrorMessage>
+                            </p>
+                        )}
                         {!signUpResult.loading &&
-                            signUpResult.error && (
-                                <p className="error_wrapper">
-                                    <ErrorMessage>{signUpResult.error.message}</ErrorMessage>
-                                </p>
-                            )
-                        }
-                        {!signUpResult.loading && signUpResult.data &&
-                            signUpResult.data.addUser === null ? "User already exsists" : JSON.stringify(signUpResult.data?.addUser)
-                        }
+                        signUpResult.data &&
+                        signUpResult.data.addUser === null
+                            ? "User already exsists"
+                            : JSON.stringify(signUpResult.data?.addUser)}
                         <SubText>
                             <u>
                                 <b>

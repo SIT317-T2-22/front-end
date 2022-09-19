@@ -16,6 +16,7 @@ import {
     InputEl,
     OuterInnerContainer,
 } from "../styles/OtherFooterElements";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const OtherFooter = () => {
     return (
@@ -42,7 +43,10 @@ const OtherFooter = () => {
                                     We believe that no one should settle for
                                     less.
                                 </p>
-                                <Icon src={Insta} alt="" />
+                                <FontAwesomeIcon
+                                    className="insta_icon"
+                                    icon={["fab", "instagram"]}
+                                />
                                 <Icon src={LinkedIn} alt="" />
                                 <Icon src={Facebook} alt="" />
                             </ColumnOne>

@@ -11,6 +11,7 @@ import {
     FooterColumnRight,
     FooterColumnMiddle,
 } from "../../styles/LandingFooterElements";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LandingFooter = ({
     changeIncreaseIndex,
@@ -29,7 +30,10 @@ const LandingFooter = ({
         <>
             <FooterBox>
                 <FooterColumnLeft>
-                    <Icon src={Insta} alt="" />
+                    <FontAwesomeIcon
+                        className="insta_icon"
+                        icon={["fab", "instagram"]}
+                    />
                     <Icon src={LinkedIn} alt="" />
                     <Icon src={Facebook} alt="" />
                 </FooterColumnLeft>

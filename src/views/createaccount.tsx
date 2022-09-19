@@ -103,7 +103,7 @@ const CreateAccountView = () => {
     return (
         <>
             <OuterContainer>
-                <OuterForm>
+                <OuterForm style={{ marginTop: "91px" }}>
                     <FormInner onSubmit={handleSubmit}>
                         <img
                             src={Logo}

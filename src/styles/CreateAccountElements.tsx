@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`
-    margin: auto;
     text-align: center;
     width: 50%;
+    margin: auto;
+    background-color: #FFF5E9;
+    height: 100%;
 `;
 
 export const OuterForm = styled.div`
+margin-top: 107px;
     padding-top: 15px;
     display: flex;
     flex-flow: column;
