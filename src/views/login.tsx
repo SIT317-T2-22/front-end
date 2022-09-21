@@ -201,7 +201,7 @@ const LoginView = () => {
                         </Button>
                         <br />
                         {isSignedIn ? "SIGNED IN" : "SIGNED OUT"}
-                        {formState && <p className="modal">Signed In</p>}
+                        {/* {formState && <p className="modal">Signed In</p>} */}
                         <SubText>
                             <u>
                                 <b>
