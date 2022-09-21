@@ -186,7 +186,7 @@ const ForgotPasswordView = () => {
                         <SubText>
                             <u>
                                 <b>
-                                    <SignInLink to="/signin">
+                                    <SignInLink to="/login">
                                         Back to login
                                     </SignInLink>
                                 </b>

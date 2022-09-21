@@ -103,6 +103,7 @@ export const Button = styled.button`
     color: #ffffff;
     margin-bottom: 25px;
     margin-top: 20px;
+    cursor: pointer;
 `;
 
 export const SubText = styled.div`
