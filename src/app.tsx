@@ -9,12 +9,18 @@ import LoginView from "./views/login";
 import SuburbView from "./views/suburb";
 import CalculateView from "./views/calculate";
 import NotFoundView from "./views/notfound";
+import ForgotPasswordView from "./views/forgotpassword";
 import {
     ApolloClient,
     ApolloProvider,
     InMemoryCache,
     gql,
 } from "@apollo/client";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+library.add(fas, far, fab);
 
 const PageWrapper = styled(Page)`
     height: 100vh;
@@ -55,6 +61,10 @@ const App = () => {
                         <Route path="/suburbs" element={<SuburbView />} />
                         <Route path="/signup" element={<SignUpView />} />
                         <Route path="/login" element={<LoginView />} />
+                        <Route
+                            path="/forgotpassword"
+                            element={<ForgotPasswordView />}
+                        />
                         <Route path="*" element={<NotFoundView />} />
                     </Routes>
                 </Page>

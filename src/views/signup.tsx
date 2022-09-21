@@ -137,6 +137,7 @@ const SignUpView = () => {
                                 marginBottom: "50px",
                                 width: "420px",
                                 height: "55px",
+                                cursor: "pointer",
                             }}
                             onClick={() => navigate(-1)}
                         />
@@ -209,9 +210,7 @@ const SignUpView = () => {
                             Already have an account?{" "}
                             <u>
                                 <b>
-                                    <SignInLink to="/login">
-                                        Sign In
-                                    </SignInLink>
+                                    <SignInLink to="/login">Sign In</SignInLink>
                                 </b>
                             </u>
                         </SubText>
