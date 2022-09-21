@@ -22,6 +22,7 @@ export const OuterForm = styled.div`
     .error_wrapper {
         margin-top: -25px;
         margin-bottom: 10px;
+        margin-left: 100px;
     }
 `;
 

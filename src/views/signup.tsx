@@ -10,6 +10,7 @@ import {
     Button,
     SubText,
     InputEl,
+    SignInLink,
 } from "../styles/CreateAccountElements";
 import { ErrorMessage } from "../styles/ErrorMessageElements";
 import Logo from "../assets/logo-coloured.png";
@@ -207,7 +208,11 @@ const SignUpView = () => {
                         <SubText>
                             Already have an account?{" "}
                             <u>
-                                <b>Sign In</b>
+                                <b>
+                                    <SignInLink to="/login">
+                                        Sign In
+                                    </SignInLink>
+                                </b>
                             </u>
                         </SubText>
                     </FormInner>
