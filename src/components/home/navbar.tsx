@@ -26,10 +26,10 @@ const NavBar = () => {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/calculate">Calculate</NavLink>
                     <NavLink to="/suburbs">Suburbs</NavLink>
-                    <NavLink to="/createaccount">Sign Up</NavLink>
+                    <NavLink to="/signup">Sign Up</NavLink>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to="/signin">Login</NavBtnLink>
+                    <NavBtnLink to="/login">Login</NavBtnLink>
                 </NavBtn>
             </Nav>
         </>

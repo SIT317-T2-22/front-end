@@ -5,12 +5,12 @@ export const OuterContainer = styled.div`
     text-align: center;
     width: 50%;
     margin: auto;
-    background-color: #FFF5E9;
+    background-color: #fff5e9;
     height: 100%;
 `;
 
 export const OuterForm = styled.div`
-margin-top: 107px;
+    margin-top: 107px;
     padding-top: 15px;
     display: flex;
     flex-flow: column;
