@@ -13,10 +13,14 @@ import {
 } from "../styles/CreateAccountElements";
 import { ErrorMessage } from "../styles/ErrorMessageElements";
 import Logo from "../assets/logo-coloured.png";
+import MailLock from "../assets/mail-lock.png";
+import PassLock from "../assets/lock.png";
+import { useNavigate } from "react-router-dom";
 import mutations from "../settings/graphql-mutations";
 
 const SignUpView = () => {
     // const [data, setData] = useState();
+    let navigate = useNavigate();
     const [formState, setFormState] = useState(false);
     const [signUp, signUpResult] = useMutation(mutations.signUp);
     const [errors, setErrors] = useState({});
@@ -120,7 +124,7 @@ const SignUpView = () => {
     return (
         <>
             <OuterContainer>
-                <OuterForm>
+                <OuterForm style={{ marginTop: "91px" }}>
                     <FormInner onSubmit={handleSubmit}>
                         <img
                             src={Logo}
@@ -133,6 +137,7 @@ const SignUpView = () => {
                                 width: "420px",
                                 height: "55px",
                             }}
+                            onClick={() => navigate(-1)}
                         />
                         <Header>Create Account</Header>
                         <Body>
@@ -140,34 +145,46 @@ const SignUpView = () => {
                             the most affordable suburbs according to your
                             financial information.
                         </Body>
-                        <InputEl
-                            placeholder="Email Address"
-                            type="email"
-                            name="email"
-                            // value={inputs.email}
-                            onChange={handleInputChange}
-                            autoFocus={false}
-                            className="email_icon"
-                        />
-                        {/* {errors.email && (
+                        <div>
+                            {" "}
+                            <img
+                                src={MailLock}
+                                alt=""
+                                className="mail_lock"
+                            ></img>
+                            <InputEl
+                                placeholder="Email Address"
+                                type="email"
+                                name="email"
+                                // value={inputs.email}
+                                onChange={handleInputChange}
+                                autoFocus={false}
+                                className="email_icon"
+                            />
+                            {/* {errors.email && (
                             <p className="error_wrapper">
                                 <ErrorMessage>{errors.email}</ErrorMessage>
                             </p>
                         )} */}
-                        <InputEl
-                            placeholder="Password"
-                            type="password"
-                            name="password"
-                            // value={inputs.password}
-                            onChange={handleInputChange}
-                            autoFocus={false}
-                            className="password_icon"
-                        />
-                        {/* {errors.password && (
+                        </div>
+                        <div>
+                            {" "}
+                            <img src={PassLock} alt="" className="lock"></img>
+                            <InputEl
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                                // value={inputs.password}
+                                onChange={handleInputChange}
+                                autoFocus={false}
+                                className="password_icon"
+                            />
+                            {/* {errors.password && (
                             <p className="error_wrapper">
                                 <ErrorMessage>{errors.password}</ErrorMessage>
                             </p>
                         )} */}
+                        </div>
                         <Button
                             // type="submit"
                             style={{ cursor: "pointer" }}
