@@ -7,7 +7,7 @@ export const FooterBox = styled.div`
     padding: 0.5rem calc((100vw - 1200px) / 2);
     margin-bottom: 30px;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
     align-items: center;
 `;
