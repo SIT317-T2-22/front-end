@@ -3,10 +3,10 @@ import NavBar from "../components/home/navbar";
 import LandingText from "../components/home/landingtext";
 import LandingFooter from "../components/home/landingfooter";
 
-import city from '../assets/landing-calculator.jpg';
-import Homes from '../assets/homes.jpeg';
+import city from '../assets/landing-city.jpg';
 import calculator from '../assets/landing-calculator.jpg';
 import map from '../assets/landing-map.jpg';
+import Homes from '../assets/homes.jpeg';
 import styled from "styled-components";
 import { LandingImageEl } from "../styles/LandingImageElements";
 import Feature1 from "../assets/feature1.png";
