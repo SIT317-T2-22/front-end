@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
 export const OuterContainer = styled.div`
-    margin: auto;
     text-align: center;
     width: 50%;
+    margin: auto;
+    background-color: #fff5e9;
+    height: 100%;
 `;
 
 export const OuterForm = styled.div`
+    margin-top: 107px;
     padding-top: 15px;
     display: flex;
     flex-flow: column;
@@ -19,6 +22,7 @@ export const OuterForm = styled.div`
     .error_wrapper {
         margin-top: -25px;
         margin-bottom: 10px;
+        margin-left: 100px;
     }
 `;
 
@@ -99,6 +103,7 @@ export const Button = styled.button`
     color: #ffffff;
     margin-bottom: 25px;
     margin-top: 20px;
+    cursor: pointer;
 `;
 
 export const SubText = styled.div`

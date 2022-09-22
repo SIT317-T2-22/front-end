@@ -34,9 +34,11 @@ export const InnerInnerContainer = styled.div`
 
 export const ColumnOne = styled.div`
     margin-left: 80px;
+
     .logo {
         margin-top: 5px;
     }
+
     p {
         font-family: "Poppins", sans-serif;
         font-weight: 600;
@@ -44,6 +46,15 @@ export const ColumnOne = styled.div`
         color: #ffffff;
         margin-top: 35px;
         margin-left: 5px;
+    }
+
+    .insta_icon {
+        height: 34px;
+        width: 30px;
+        cursor: pointer;
+        color: white;
+        margin-top: 60px;
+        margin-right: 40px;
     }
 `;
 

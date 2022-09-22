@@ -14,6 +14,16 @@ export const FooterBox = styled.div`
 
 export const FooterColumnLeft = styled.div`
     display: flex;
+
+    .insta_icon {
+        display: flex;
+        margin-top: 12px;
+        margin-right: 14px;
+        height: 34px;
+        width: 30px;
+        cursor: pointer;
+        color: white;
+    }
 `;
 
 export const FooterColumnMiddle = styled.div`

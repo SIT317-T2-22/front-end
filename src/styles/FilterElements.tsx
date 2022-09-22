@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Arrow from "../assets/Arrow.png";
+
 export const FilterContainer = styled.div`
     position: relative;
     width: 45%;
@@ -65,15 +67,17 @@ export const ColumnOne = styled.div`
         position: relative;
 
         select {
-            background: transparent;
-            border: 0;
-            padding: 0;
-            border-radius: 0;
             width: 100%;
-            position: relative;
-            z-index: 10;
+            border: 0;
             outline: none;
             cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding-right: 15px;
+            background-image: url("https://i.imgur.com/5v17RRC.png");
+            background-repeat: no-repeat;
+            background-position: 95px 0px;
         }
     }
 `;
@@ -140,15 +144,17 @@ export const ColumnTwo = styled.div`
         position: relative;
         margin-left: -18px;
         select {
-            background: transparent;
-            border: 0;
-            padding: 0;
-            border-radius: 0;
             width: 80%;
-            position: relative;
-            z-index: 10;
+            border: 0;
             outline: none;
             cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding-right: 15px;
+            background-image: url("https://i.imgur.com/5v17RRC.png");
+            background-repeat: no-repeat;
+            background-position: 91px 0px;
         }
     }
 
@@ -178,15 +184,17 @@ export const ColumnTwo = styled.div`
         position: relative;
 
         select {
-            background: transparent;
-            border: 0;
-            padding: 0;
-            border-radius: 0;
             width: 100%;
-            position: relative;
-            z-index: 10;
+            border: 0;
             outline: none;
             cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding-right: 15px;
+            background-image: url("https://i.imgur.com/5v17RRC.png");
+            background-repeat: no-repeat;
+            background-position: 90px 0px;
         }
 `;
 
@@ -225,15 +233,17 @@ export const ColumnThree = styled.div`
         margin-left: 4px;
 
         select {
-            background: transparent;
-            border: 0;
-            padding: 0;
-            border-radius: 0;
             width: 100%;
-            position: relative;
-            z-index: 10;
+            border: 0;
             outline: none;
             cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            padding-right: 15px;
+            background-image: url("https://i.imgur.com/5v17RRC.png");
+            background-repeat: no-repeat;
+            background-position: 97px 0px;
         }
     }
 `;

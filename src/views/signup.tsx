@@ -15,10 +15,11 @@ import {
 import { ErrorMessage } from "../styles/ErrorMessageElements";
 import Logo from "../assets/logo-coloured.png";
 import MailLock from "../assets/mail-lock.png";
+import PassLock from "../assets/lock.png";
 import { useNavigate } from "react-router-dom";
 import mutations from "../settings/graphql-mutations";
 
-const ForgotPasswordView = () => {
+const SignUpView = () => {
     // const [data, setData] = useState();
     let navigate = useNavigate();
     const [formState, setFormState] = useState(false);
@@ -61,12 +62,13 @@ const ForgotPasswordView = () => {
             // email Errors
             type errors = {
                 email?: string;
+                password?: string;
             };
 
             const objErrors: errors = {};
             if (!inputs.email) {
                 objErrors.email = "Hold on, a email is required";
-            } else if (inputs.email.match(cond)) {
+            } else if (!inputs.email.match(cond)) {
                 objErrors.email = "Hold on, that email doesn't look valid";
             }
             if (!inputs.password) {
@@ -123,7 +125,7 @@ const ForgotPasswordView = () => {
     return (
         <>
             <OuterContainer>
-                <OuterForm>
+                <OuterForm style={{ marginTop: "91px" }}>
                     <FormInner onSubmit={handleSubmit}>
                         <img
                             src={Logo}
@@ -133,18 +135,20 @@ const ForgotPasswordView = () => {
                                 marginLeft: "auto",
                                 marginRight: "auto",
                                 marginBottom: "50px",
-                                width: "297px",
-                                height: "47px",
+                                width: "420px",
+                                height: "55px",
                                 cursor: "pointer",
                             }}
                             onClick={() => navigate(-1)}
                         />
-                        <Header>Forgot your password</Header>
+                        <Header>Create Account</Header>
                         <Body>
-                            Enter your email address and we'll send you a link
-                            to reset your password.
+                            Create an account to get a tailored map and list of
+                            the most affordable suburbs according to your
+                            financial information.
                         </Body>
                         <div>
+                            {" "}
                             <img
                                 src={MailLock}
                                 alt=""
@@ -154,21 +158,40 @@ const ForgotPasswordView = () => {
                                 placeholder="Email Address"
                                 type="email"
                                 name="email"
-                                value={inputs.email}
+                                // value={inputs.email}
                                 onChange={handleInputChange}
                                 autoFocus={false}
+                                className="email_icon"
                             />
                             {/* {errors.email && (
-                                <p className="error_wrapper">
-                                    <ErrorMessage>{errors.email}</ErrorMessage>
-                                </p>
-                            )} */}
+                            <p className="error_wrapper">
+                                <ErrorMessage>{errors.email}</ErrorMessage>
+                            </p>
+                        )} */}
+                        </div>
+                        <div>
+                            {" "}
+                            <img src={PassLock} alt="" className="lock"></img>
+                            <InputEl
+                                placeholder="Password"
+                                type="password"
+                                name="password"
+                                // value={inputs.password}
+                                onChange={handleInputChange}
+                                autoFocus={false}
+                                className="password_icon"
+                            />
+                            {/* {errors.password && (
+                            <p className="error_wrapper">
+                                <ErrorMessage>{errors.password}</ErrorMessage>
+                            </p>
+                        )} */}
                         </div>
                         <Button
                             // type="submit"
                             style={{ cursor: "pointer" }}
                         >
-                            Reset Password
+                            Create Account
                         </Button>
                         {formState && <p className="modal">Account created</p>}
                         {!signUpResult.loading && signUpResult.error && (
@@ -184,11 +207,10 @@ const ForgotPasswordView = () => {
                             ? "User already exsists"
                             : JSON.stringify(signUpResult.data?.addUser)}
                         <SubText>
+                            Already have an account?{" "}
                             <u>
                                 <b>
-                                    <SignInLink to="/login">
-                                        Back to login
-                                    </SignInLink>
+                                    <SignInLink to="/login">Sign In</SignInLink>
                                 </b>
                             </u>
                         </SubText>
@@ -199,4 +221,4 @@ const ForgotPasswordView = () => {
     );
 };
 
-export default ForgotPasswordView;
+export default SignUpView;

@@ -55,6 +55,13 @@ export const BoxOne = styled.div`
                 outline: none;
                 cursor: pointer;
                 padding-left: 12px;
+
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 8px;
             }
         }
 
@@ -96,6 +103,13 @@ export const BoxOne = styled.div`
                 outline: none;
                 cursor: pointer;
                 padding-left: 12px;
+
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 273px 8px;
             }
         }
     }
@@ -153,6 +167,14 @@ export const BoxOne = styled.div`
                 font-size: 13px;
                 line-height: 15px;
                 color: #575757;
+
+                margin-left: 7px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 9px;
             }
         }
     }
@@ -207,6 +229,7 @@ export const BoxOne = styled.div`
 `;
 
 export const BoxTwo = styled.div`
+    z-index: 20;
     display: grid;
     background: #eeeeee;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -258,6 +281,14 @@ export const BoxTwo = styled.div`
                 font-size: 13px;
                 line-height: 15px;
                 color: #575757;
+
+                margin-left: 7px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 9px;
             }
         }
 
@@ -315,6 +346,14 @@ export const BoxTwo = styled.div`
                 font-size: 13px;
                 line-height: 15px;
                 color: #575757;
+
+                                margin-left: 7px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 9px;
             }
         }
 
@@ -372,6 +411,14 @@ export const BoxTwo = styled.div`
                 font-size: 13px;
                 line-height: 15px;
                 color: #575757;
+
+                                margin-left: 7px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 9px;
             }
         }
 
@@ -429,6 +476,14 @@ export const BoxTwo = styled.div`
                 font-size: 13px;
                 line-height: 15px;
                 color: #575757;
+
+                                margin-left: 7px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 9px;
             }
         }
 
@@ -486,6 +541,14 @@ export const BoxTwo = styled.div`
                 font-size: 13px;
                 line-height: 15px;
                 color: #575757;
+
+                                margin-left: 7px;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                background-image: url("https://i.imgur.com/5v17RRC.png");
+                background-repeat: no-repeat;
+                background-position: 99px 9px;
             }
         }
 

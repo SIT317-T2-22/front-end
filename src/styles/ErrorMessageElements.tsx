@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ErrorEl = styled.div`
     display: flex;
     align-items: center;
-    color: #b09a80;
+    color: #ff0000;
     background-color: #fff;
     padding: 3px 10px;
     font-size: 50px;
