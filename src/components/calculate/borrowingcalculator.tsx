@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import {
     Heading,
     SubHeading,
@@ -10,11 +12,105 @@ import {
     Button,
 } from "../../styles/BorrowingCalculatorElements";
 
+interface DataTypes {
+    children: number;
+    adults: number;
+    property: string;
+    earn: number;
+    earn_per: string;
+    bills: number;
+    bills_per: string;
+    rent: number;
+    rent_per: string;
+    home: number;
+    home_loan_per: string;
+    loan: number;
+    loan_per: string;
+    credit: number;
+    credit_per: string;
+}
+
 const BorrowingCalculator = () => {
+    const [inputs, setInputs] = useState<DataTypes[]>([]);
+    const [formState, setFormState] = useState(false);
+    const navigate = useNavigate();
+
+    const useForm = (initialValues: any) => {
+        const handleSubmit = (e: any) => {
+            if (e) {
+                e.preventDefault();
+            }
+            console.log(inputs);
+        };
+
+        const handleInputChange = (e: { target: any }) => {
+            setInputs((inputs) => ({
+                ...inputs,
+                [e.target.name]: e.target.value,
+            }));
+        };
+        return {
+            handleSubmit,
+            handleInputChange,
+            inputs,
+        };
+    };
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+        const data = { ...inputs };
+        // await api.noemail.create(data);
+        setFormState(true);
+        console.log("Authenticated", inputs);
+        // handleReset();
+    };
+
+    // const handleReset = () => {
+    //     setInputs(() => ({
+    //         children: 0,
+    //         adults: 0,
+    //         property: "House",
+    //         earn: 0,
+    //         earn_per: "Per year",
+    //         bills: 0,
+    //         bills_per: "Per week",
+    //         rent: 0,
+    //         rent_per: "Per week",
+    //         home: 0,
+    //         home_loan_per: "Per week",
+    //         loan: 0,
+    //         loan_per: "Per week",
+    //         credit: 0,
+    //         credit_per: "Per week",
+    //     }));
+    // };
+
+    const { handleInputChange } = useForm({
+        children: 0,
+        adults: 0,
+        property: "House",
+        earn: 0,
+        earn_per: "Per year",
+        bills: 0,
+        bills_per: "Per week",
+        rent: 0,
+        rent_per: "Per week",
+        home: 0,
+        home_loan_per: "Per week",
+        loan: 0,
+        loan_per: "Per week",
+        credit: 0,
+        credit_per: "Per week",
+    });
+
+    const navigateToSuburb = () => {
+        navigate("/suburbs");
+    };
+
     return (
         <>
             <OuterContainer>
-                <InnerContainer>
+                <InnerContainer onSubmit={handleSubmit}>
                     <ListInner>
                         <BoxOne>
                             <div className="first_row">
@@ -87,7 +183,9 @@ const BorrowingCalculator = () => {
                                 <input
                                     placeholder="0"
                                     type="text"
-                                    name="income"
+                                    name="earn"
+                                    value={inputs.earn}
+                                    onChange={handleInputChange}
                                 ></input>
                                 <div className="select second">
                                     <select>
@@ -230,7 +328,9 @@ const BorrowingCalculator = () => {
                             </div>
                         </BoxTwo>
                     </ListInner>
-                    <Button>Get Suburbs Report</Button>
+                    <Button type="submit" onClick={navigateToSuburb}>
+                        Get Suburbs Report
+                    </Button>
                 </InnerContainer>
             </OuterContainer>
         </>

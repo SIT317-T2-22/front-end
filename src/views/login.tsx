@@ -30,8 +30,11 @@ const LoginView = () => {
             if (!signInResult.loading) {
                 if (signInResult.error) console.error(signInResult.error);
                 else if (signInResult.data) {
+                    console.log("blah");
                     console.log(signInResult.data.signIn);
+                    console.log("rar")
                     setIsSignedIn(signInResult.data.signIn);
+                    console.log("beee")
                 }
             }
             console.log(signInResult);
@@ -72,10 +75,6 @@ const LoginView = () => {
     };
 
     const validate = (inputs: any) => {
-        const cond = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
-            inputs.email
-        );
-
         // email Errors
         type errors = {
             email?: string;
@@ -85,8 +84,6 @@ const LoginView = () => {
         const objErrors: errors = {};
         if (!inputs.email) {
             objErrors.email = "Hold on, a email is required";
-        } else if (inputs.email.match(cond)) {
-            objErrors.email = "Hold on, that email doesn't look valid";
         }
         if (!inputs.password) {
             // password Errors

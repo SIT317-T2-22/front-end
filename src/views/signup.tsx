@@ -33,7 +33,7 @@ const SignUpView = () => {
         (initialValues: any) => {
             const handleSubmit = (e: any) => {
                 if (e) {
-                    e.preventDefault();
+                    e?.preventDefault();
                 }
                 console.log(inputs);
             };
