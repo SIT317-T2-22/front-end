@@ -11,6 +11,7 @@ import {
 } from "../../styles/BorrowingCalculatorElements";
 
 const BorrowingCalculator = () => {
+    const [result, setResult] = React.useState("");
     return (
         <>
             <OuterContainer>
@@ -230,7 +231,12 @@ const BorrowingCalculator = () => {
                             </div>
                         </BoxTwo>
                     </ListInner>
-                    <Button>Get Suburbs Report</Button>
+                    <Button onClick={() => setResult("You can borrow $" + (Math.round(Math.random()*100)*10000).toLocaleString())}>
+                        Get Suburbs Report
+                    </Button>
+                    <br />
+                    <br />
+                    <h3 style={{textAlign: "center"}}>{ result }</h3>
                 </InnerContainer>
             </OuterContainer>
         </>

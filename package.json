@@ -17,10 +17,12 @@
     "@types/jest": "^28.1.0",
     "@types/node": "^17.0.38",
     "@types/react-dom": "^18.0.5",
+    "google-map-react": "^2.2.0",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.1.0",
     "react-global-configuration": "^1.4.1",
+    "react-google-charts": "^4.0.0",
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.1.5",
     "react-router-dom": "^6.4.0",
@@ -51,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@types/google-map-react": "^2.1.7",
     "@types/react": "^18.0.18",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",

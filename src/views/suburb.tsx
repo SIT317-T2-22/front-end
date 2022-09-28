@@ -5,6 +5,16 @@ import Map from "../components/suburbs/map";
 import List from "../components/suburbs/list";
 import OtherFooter from "../components/otherfooter";
 import { useState } from "react";
+import styled from "styled-components";
+
+const MapWrapper = styled.div`
+    width: 100vw;
+    padding: 4vh 1em;
+    background-color: antiquewhite;
+    margin-top: -300px;
+    z-index: 4;
+    padding-bottom: 1px;
+`;
 
 const SuburbView = () => {
     const [isToggleViewOne, setIsToggleViewOne] = useState(true);
@@ -37,13 +47,16 @@ const SuburbView = () => {
     return (
         <>
             <div style={{ overflowX: "hidden", position: "relative" }}>
-                <OtherNavBar></OtherNavBar>
+                <OtherNavBar />
                 <TopFilter
                     changeViewOne={changeViewOne}
                     changeViewTwo={changeViewTwo}
                 ></TopFilter>
-                {isToggleViewOne ? <Map></Map> : <List></List>}
-                <OtherFooter></OtherFooter>
+                {isToggleViewOne ? 
+                <MapWrapper>
+                    <Map />
+                </MapWrapper> : <List/>}
+                <OtherFooter />
             </div>
         </>
     );
