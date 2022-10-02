@@ -341,20 +341,21 @@ const LandingView = () => {
             <ValuePropSection>
                 <div>
                     <div>
-                        <h2>Value Proposition</h2>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus totam possimus doloribus sunt. Consectetur voluptatem eum repudiandae doloribus? Voluptatem amet repellat ipsa neque suscipit beatae blanditiis dolorem officiis vitae possimus?
+                        <h2>Why choose us?</h2>
+                        <br />
+                        Forget real estate agents who have limited knowledge and ulterior motives - use FindMyAbode to find the best suburb for <b>you!</b>
+                        <br />
+                        <br />
+                        Our service is catered towards your individual needs and personal financial capabilities so that your first home buying experience is smooth, and financially successful.
                         <br />
                         <br />
                         <ul>
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
-                            <li>Lorem ipsum dolor sit amet consectetur</li>
+                            <li>Display affordable suburbs</li>
+                            <li>Find loan borrowing capacity</li>
+                            <li>Calculate total cost of purchase</li>
                         </ul>
                         <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem ea accusamus soluta architecto tempore veritatis doloremque repellendus at repellat quibusdam asperiores officiis. Impedit, sit hic qui nihil quia tempora.
-                        <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, autem ea accusamus soluta architecto tempore veritatis doloremque repellendus at repellat quibusdam asperiores officiis. Impedit, sit hic qui nihil quia tempora.
+                        We provide an easy-to-use calculator to work out the finances for people looking to buy a first home. We then help to provide a snapshot of an area, showing the Local Government Areas that best match your requirements. You can also apply filters such as how many bedrooms and bathrooms are needed so that you can further narrow-down your desired purchase location.
                     </div>
                     <StepsWrapper>
                         <Step colour={secondaryColour} number='1'>
@@ -375,19 +376,19 @@ const LandingView = () => {
                     <hr />
                     <FeaturesWrapper>
                         <div>
-                            <img src={Feature1} alt="Feature1" />
-                            <h4>Feature 1</h4>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, impedit nobis obcaecati placeat saepe nemo doloribus alias. Natus officia est.
+                            <img src={Feature2} alt="Feature2" />
+                            <h4>Tailored suggestions</h4>
+                            Capitalise on your oppurtunities and associate your financial circumstances to your profile. FindMyAbode can then show you areas, relevant to you!
                         </div>
                         <div>
-                            <img src={Feature2} alt="Feature2" />
-                            <h4>Feature 2</h4>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, impedit nobis obcaecati placeat saepe nemo doloribus alias. Natus officia est.
+                            <img src={Feature1} alt="Feature1" />
+                            <h4>Calculate</h4>
+                            Get detailed reports on your financial borrowing capability, based on your own details to find out how much can you really afford to borrow
                         </div>
                         <div>
                             <img src={Feature3} alt="Feature3" />
-                            <h4>Feature 3</h4>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, impedit nobis obcaecati placeat saepe nemo doloribus alias. Natus officia est.
+                            <h4>Explore</h4>
+                            Explore suburbs in Melbourne which are most affordable. Add filters to refine your search, and narrow down the best place for your next home
                         </div>
                     </FeaturesWrapper>
                 </div>
@@ -397,21 +398,25 @@ const LandingView = () => {
                     <Quote>
                         <Profile src={QuoteProfile1}/>
                         <br />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, eius sed, dolores, itaque maxime vero molestiae sunt nulla nihil assumenda non doloribus aut molestias perferendis enim aliquam illo deleniti. Voluptatum!</p>
+                        <p>Me and my husband used FindMyAbode to search for our first home. We'd tried to enter the property market before the pandemic, we just kept on finding properties that were out of our financial capability. We tried getting advice from real estate agents but they only new their local areas. Finally, FindMyAbode helped us find the suburb which we could actually afford!</p>
                         <br />
-                        <b>First Last (2022)</b>
+                        <b>Gregory Hatter</b>
+                        <br />
+                        (user since 2021)
                     </Quote>
                     <Quote >
                         <Profile src={QuoteProfile2}/>
                         <br />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, eius sed, dolores, itaque maxime vero molestiae sunt nulla nihil assumenda non doloribus aut molestias perferendis enim aliquam illo deleniti. Voluptatum!</p>
+                        <p>Being a single mum I thought that purchasing property was out of my reach - I was just doomed to continue renting for the rest of my life. But with the help of a financial adviser and using FindMyAbode's loan calculator, I was able to figure out a plan to buy my own place. With FindMyAbode I narrowed down the area, and as of last year - the unit that I could buy.</p>
                         <br />
-                        <b>First Last (2022)</b>
+                        <b>Tamara Fulton</b>
+                        <br />
+                        (user since 2019)
                     </Quote>
                 </div>
             </QuoteSection>
             <CtaSection>
-                <h2>Lorem ipsum dolar sit amet</h2>
+                <h2>Start exploring affordable suburbs!</h2>
                 <CTA>Get Started</CTA>
             </CtaSection>
         </Wrapper>
